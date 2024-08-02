@@ -22,4 +22,4 @@ RUN ./gradlew clean build -x test
 ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
 
 # 빌드 결과 jar 파일을 실행
-CMD ["java", "-jar", "/app/build/libs/ssap-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/build/libs/remember-spring-0.0.1-SNAPSHOT.jar"]
