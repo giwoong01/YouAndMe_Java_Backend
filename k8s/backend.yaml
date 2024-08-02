@@ -14,6 +14,7 @@ spec:
         app: backend
     spec:	
       containers:
+        command: ["sh", "-c", "sleep 1d"]
         - name: backend
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_75b7347af229
           imagePullPolicy: Always
@@ -25,7 +26,7 @@ spec:
       volumes:
         - name: secret-volume
           configMap:
-            name: my-secret-file
+            name: my-secret-file-26c79d2884
       tolerations:
         - key: "node-role.dkosv3.9rum.cc/lb"
           operator: "Equal"

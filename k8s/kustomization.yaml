@@ -9,4 +9,3 @@ configMapGenerator:
   - name: init-db
     files:
       - configs/init.sql
-  - name: my-secret-file
