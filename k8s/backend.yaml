@@ -25,7 +25,7 @@ spec:
       volumes:
         - name: secret-volume
           configMap:
-            name: my-secret-file
+            name: my-secret-file-26c79d2884
       tolerations:
         - key: "node-role.dkosv3.9rum.cc/lb"
           operator: "Equal"
