@@ -21,5 +21,6 @@ RUN ./gradlew clean build -x test
 # DATABASE_URL을 환경 변수로 삽입
 ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
 
+
 # 빌드 결과 jar 파일을 실행
 CMD ["java", "-jar", "/app/build/libs/remember-spring-0.0.1-SNAPSHOT.jar"]
