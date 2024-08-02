@@ -6,7 +6,7 @@ WORKDIR /app
 # Spring 소스 코드를 이미지에 복사
 COPY . .
 
-COPY k8s/configs/application-prod.yml src/main/resources/
+COPY /app/k8s/configs/application-prod.yml /app/src/main/resources/
 
 # /root/.gradle 디렉토리 생성
 RUN mkdir -p /root/.gradle
