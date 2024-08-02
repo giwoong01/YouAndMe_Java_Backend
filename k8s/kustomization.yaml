@@ -1,10 +1,14 @@
-namespace: krampoline
+namespace: default
 resources:
   - backend.yaml
   - ingress.yaml
   - service.yaml
   - mariadb.yaml
+  - python.yaml
 configMapGenerator:
   - name: init-db
     files:
       - configs/init.sql
+  - name: my-secret-file
+    files:
+      - configs/application-prod.yml
