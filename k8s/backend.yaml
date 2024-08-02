@@ -21,6 +21,7 @@ spec:
           volumeMounts:
             - name: secret-volume
               mountPath: /app/build/resources/main
+			  mountPath: /app/src/main/resources
           ports:
             - containerPort: 8092
       volumes:
