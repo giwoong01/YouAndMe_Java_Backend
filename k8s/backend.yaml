@@ -20,7 +20,7 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - name: secret-volume
-              mountPath: /app/src/resources/main
+              mountPath: /app/build/resources/main
           ports:
             - containerPort: 8092
       volumes:
