@@ -12,3 +12,5 @@ configMapGenerator:
   - name: my-secret-file
     files:
       - configs/application-prod.yml
+      - configs/application.yml
+      - configs/application-auth.yml

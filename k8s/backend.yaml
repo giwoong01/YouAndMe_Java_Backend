@@ -12,14 +12,15 @@ spec:
     metadata:
       labels:
         app: backend
-    spec:
+    spec:	
       containers:
         - name: backend
+          command: ["sh", "-c", "sleep 1d"] 
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_75b7347af229
           imagePullPolicy: Always
           volumeMounts:
             - name: secret-volume
-              mountPath: /app/src/main/resources
+              mountPath: /app/build/resources/main
           ports:
             - containerPort: 8092
       volumes:
