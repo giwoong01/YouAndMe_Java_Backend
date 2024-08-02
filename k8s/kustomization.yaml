@@ -9,3 +9,8 @@ configMapGenerator:
   - name: init-db
     files:
       - configs/init.sql
+  - name: my-secret-file
+    files:
+      - configs/application-prod.yml
+      - configs/application.yml
+      - configs/application-auth.yml
