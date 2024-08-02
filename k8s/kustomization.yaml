@@ -4,6 +4,7 @@ resources:
   - ingress.yaml
   - service.yaml
   - mariadb.yaml
+  - python.yaml
 configMapGenerator:
   - name: init-db
     files:
