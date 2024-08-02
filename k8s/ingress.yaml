@@ -27,7 +27,6 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: re-bom.shop  # 도메인 이름 또는 IP 주소로 설정
       http:
         paths:
           - path: /
