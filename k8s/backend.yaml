@@ -8,14 +8,13 @@ spec:
   selector:
     matchLabels:
       app: backend
-  template: 
+  template:
     metadata:
       labels:
         app: backend
     spec:	
       containers:
         - name: backend
-          command: ["sh", "-c", "sleep 1d"] 
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_75b7347af229
           imagePullPolicy: Always
           volumeMounts:
