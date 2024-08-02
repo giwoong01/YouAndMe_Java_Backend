@@ -17,8 +17,15 @@ spec:
         - name: backend
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_75b7347af229
           imagePullPolicy: Always
+          volumeMounts:
+            - name: secret-volume
+              mountPath: /app/src/main/resources
           ports:
             - containerPort: 8092
+      volumes:
+        - name: secret-volume
+          configMap:
+            name: my-secret-file
       tolerations:
         - key: "node-role.dkosv3.9rum.cc/lb"
           operator: "Equal"
