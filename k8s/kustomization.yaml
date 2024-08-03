@@ -5,12 +5,21 @@ resources:
   - service.yaml
   - mariadb.yaml
   - python.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
 configMapGenerator:
-  - name: init-db
+  - name: nginx
     files:
-      - configs/init.sql
-  - name: my-secret-file
-    files:
-      - configs/application-prod.yml
-      - configs/application.yml
-      - configs/application-auth.yml
+      - configs/default.conf
+
+# configMapGenerator:
+#   - name: init-db
+#     files:
+#       - configs/init.sql
+#   - name: my-secret-file
+#     files:
+#       - configs/application.yml
+#       - configs/application-auth.yml
+#       - configs/application-prod.yml
