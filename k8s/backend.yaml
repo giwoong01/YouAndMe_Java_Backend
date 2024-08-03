@@ -15,26 +15,14 @@ spec:
     spec:
       containers:
         - name: backend
-          command: ["sh", "-c", "sleep 1d"]
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_75b7347af229
           imagePullPolicy: Always
           volumeMounts:
             - name: secret-volume
-              mountPath: /app/build/resources/main
+              mountPath: /app/config
           ports:
             - containerPort: 8092
       volumes:
         - name: secret-volume
           configMap:
-            name: my-secret-file-26c79d2884
-      tolerations:
-        - key: "node-role.dkosv3.9rum.cc/lb"
-          operator: "Equal"
-          value: "true"
-          effect: "NoSchedule"
-        - key: "node-role.kubernetes.io/master"
-          operator: "Exists"
-          effect: "NoSchedule"
-        - key: "node.kubernetes.io/unreachable"
-          operator: "Exists"
-          effect: "NoExecute"
+            name: my-secret-file
